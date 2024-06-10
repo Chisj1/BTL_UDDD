@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2023 Samson Achiaga
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_background"
+        tools:context=".ui.AboutFragment">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_back"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView"
+                android:background="@null"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/black_day_white_night"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/about"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="@dimen/_22ssp"
+            android:textColor="@color/black_day_white_night"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/receiver_profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_4sdp"
+            app:cardBackgroundColor="@color/about_icon_color"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:src="@drawable/ic_logo_audio_note" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/black_day_white_night"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@+id/receiver_profile_image"
+            app:layout_constraintStart_toStartOf="@+id/receiver_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/receiver_profile_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
